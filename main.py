@@ -4,7 +4,7 @@ import PIL
 
 # IMPORTANT : Hide this key before pushing this code to a public repo
 # Initialise GOOGLE_API_KEY env variable by using the MakerSuite API key
-os.environ['GOOGLE_API_KEY'] = 'AIzaSyAKOnG4U3xL82hbjlV3yW8LQN9eo33CQlk'
+os.environ['GOOGLE_API_KEY'] = '<your key here>'
 genai.configure(api_key = os.environ['GOOGLE_API_KEY'])
 
 # For text only inputs, create an instance of gemini-pro model

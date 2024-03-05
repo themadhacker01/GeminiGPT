@@ -1,0 +1,2 @@
+# Ignore __pycache__ for git flow
+__pycache__/

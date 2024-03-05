@@ -5,7 +5,7 @@ import google.generativeai as genai
 st.title('Gemini Bot')
 
 # Initialise the env with the API key and setup the GenAI instance
-os.environ['GOOGLE_API_KEY'] = 'AIzaSyA3bmnHzwR8ySx4EkF-PSpKeduKVYYflpM'
+os.environ['GOOGLE_API_KEY'] = '<your key here>'
 genai.configure(api_key = os.environ['GOOGLE_API_KEY'])
 
 # Selecting gemini-pro for text only interaction

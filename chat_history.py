@@ -9,23 +9,19 @@ genai.configure(api_key = os.environ['GOOGLE_API_KEY'])
 
 # For text only inputs, create an instance of gemini-pro model
 text_model = genai.GenerativeModel('gemini-pro')
-vision_model = genai.GenerativeModel('gemini-pro-vision')
+
+chat = text_model.start_chat(history=[])
 
 # Prompting the gemini-pro model, an example
-response = text_model.generate_content('Is the Karnataka govt becoming anti-migrant')
-
-# View all attributes in the response object
-# print(vars(response))
+response = chat.send_message('Is the Karnataka govt becoming anti-migrant')
 
 # Only show the text response to the prompt
 print(response.text)
 
-# Pass an image to the vision model and prompt it
-# image = PIL.Image.open('assets/sample_image.png')
-# response = vision_model.generate_content(['Explain the picture', image])
-# print(response.text)
+# View all attributes in the response object
+# print(vars(response))
 
-chat = text_model.start_chat(history=[])
+# Send another prompt, to test chat history
 response = chat.send_message('What is the best place to startup in India - Bangalore or Hyd')
 print(response.text)
 

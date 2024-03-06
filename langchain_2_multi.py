@@ -2,9 +2,13 @@ import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage
 
+# Initialising the environment variables
 os.environ['GOOGLE_API_KEY'] = '<your key here>'
 
+# Use the gemini-pro-vision model for chat-like interactions
 llm = ChatGoogleGenerativeAI(model = 'gemini-pro-vision')
+
+# Create messages in a langchain format
 msg = HumanMessage(
     content = [
         {
